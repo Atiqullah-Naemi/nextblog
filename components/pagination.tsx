@@ -28,7 +28,13 @@ export default function Pagination({
           )}
           disabled={currentPage === 1}
           onClick={() => {
-            router.push(`${pageUrl}?page=${currentPage - 1}`);
+            router.push(
+              `${
+                pageUrl
+                  ? `pageUrl?page=${currentPage - 1}`
+                  : `?page=${currentPage - 1}`
+              }`
+            );
           }}
         >
           <MoveLeft />
@@ -45,7 +51,13 @@ export default function Pagination({
           )}
           disabled={currentPage === totalPages}
           onClick={() => {
-            router.push(`${pageUrl}?page=${currentPage + 1}`);
+            router.push(
+              `${
+                pageUrl
+                  ? `pageUrl?page=${currentPage + 1}`
+                  : `?page=${currentPage + 1}`
+              }`
+            );
           }}
         >
           <MoveRight />

@@ -33,6 +33,8 @@ export function stripHtml(html: string) {
 }
 
 export const getNameInitials = (name: string) => {
+  if (!name) return null;
+
   return name
     .split(" ")
     .map((part) => part.charAt(0))

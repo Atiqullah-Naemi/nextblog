@@ -11,7 +11,10 @@ export default async function BlogLayout({
   return (
     <>
       <div className="relative w-full">
-        <NavMenu name={session?.user.name} />
+        <NavMenu
+          userName={session?.user.name}
+          userImage={session?.user.image as string}
+        />
 
         {children}
       </div>

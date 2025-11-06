@@ -35,7 +35,7 @@ export default function PostCard({ post }: PostProps) {
         />
       </div>
       <CardHeader className="gap-0">
-        <CardTitle className="font-semibold line-clamp-3">
+        <CardTitle className="font-semibold line-clamp-3 pt-2">
           {post.title}
         </CardTitle>
       </CardHeader>

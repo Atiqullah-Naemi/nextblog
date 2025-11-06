@@ -18,7 +18,10 @@ export default async function Home({
   return (
     <>
       <div className="relative w-full">
-        <NavMenu name={session?.user.name} />
+        <NavMenu
+          userName={session?.user.name}
+          userImage={session?.user.image as string}
+        />
       </div>
       <Header />
       <div className="flex flex-col gap-6 justify-center">
